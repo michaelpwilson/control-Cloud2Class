@@ -1,0 +1,167 @@
+<div class="content-a">
+<div class="row ui-sortable">
+      <div class="col-sm-3">
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Lesson Login</h2>
+  </div>
+  <div class="panel-body">
+        <form role="form" action="/session/quick" method="POST" class="quick-login">
+<div class="form-group">
+<label for="forename">Forename:</label>
+<input class="form-control" type="text" id="forename" name="forename" autocomplete="off" required="" placeholder="your first name">
+</div>
+<div class="form-group">
+<label for="surname">Surname:</label>
+<input class="form-control" type="text" id="surname" name="surname" autocomplete="off" required="" placeholder="your last name">
+</div>
+<div class="form-group" id="lessonCode">
+<label for="lcode1">Lesson Code:</label>
+<div class="row ui-sortable">
+<div class="col-xs-6" style="padding-right: 5px;"><input class="form-control" type="text" size="8" name="lcode1" maxlength="10" autocomplete="off" required="" placeholder="word" onfocus="this.type='text';" onblur="this.type='password';"></div>
+<div class="col-xs-6" style="padding-left: 5px;"><input class="form-control" type="text" size="8" name="lcode2" maxlength="6" autocomplete="off" required="" placeholder="number" onfocus="this.type='text';" onblur="this.type='password';"></div>
+</div>
+</div>
+<input type="submit" value="Go!" class="btn btn-danger nice-shadow">
+</form>
+  </div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">User Login</h2>
+  </div>
+  <div class="panel-body">
+<form action="/session/create" method="POST" name="loginform">
+<% if(flash && flash.err) { %>
+<div class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</div>
+<% } %>
+<div class="form-group">
+<label for="username">Username:</label>
+<input class="form-control" type="text" id="username" name="username" required="" placeholder="your username">
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input class="form-control" type="password" id="password" name="password" autocomplete="off" required="" placeholder="your password">
+</div>
+<div style="height: 70px;"></div>
+<input type="submit" class="btn btn-danger nice-shadow" value="Go!" name="login">
+<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>
+</div>
+</div></div>
+<div class="col-sm-3">
+<div class="panel panel-default" style="" id="text-change" data-original-title="" title="">
+<div class="panel-body">
+<img class="c2c-jq" src="https://cloud2class.com/assets/img/c2c-logo.png" style="height: 160px; display: none;">
+<p class="text" style="display: block; margin-top: 20px">Access exercises and worksheets</p>
+</div>
+<div class="panel-footer">Cloud2Class 2014</div>
+</div>
+</div>
+    </div>
+</div>
+<div class="content-b">
+<div class="row ui-sortable">
+<div class="col-sm-5">
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Register</h2>
+  </div>
+  <div class="panel-body">
+<form action="register.php" method="POST">
+<div class="form-group">
+<div class="form-group has-feedback">
+  <label class="control-label" for="firstname">First Name:</label>
+  <input type="text" class="form-control" id="firstname" name="forename" required="">
+  <span class="glyphicon glyphicon-asterisk form-control-feedback"></span>
+</div>
+<div class="form-group has-feedback">
+  <label class="control-label" for="secondname">Second Name:</label>
+  <input type="text" class="form-control" id="secondname" name="surname" required="">
+  <span class="glyphicon glyphicon-asterisk form-control-feedback"></span>
+</div>
+<div class="form-group has-feedback">
+  <label class="control-label" for="email">Email Address:</label>
+  <input type="text" class="form-control" id="email" name="email" required="">
+  <span class="glyphicon glyphicon-asterisk form-control-feedback"></span>
+</div>
+<input class="btn btn-danger nice-shadow" type="submit" value="Register">
+
+<p style="margin-top:13px; display:none;"><font class="glyphicon glyphicon-asterisk"></font> = Mandatory</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+  <div class="col-sm-3">
+<div class="panel panel-danger raspberry-pi">
+  <div class="panel-heading">
+    <h2 class="panel-title">Raspberry Pi</h2>
+  </div>
+  <div class="panel-body">
+<ul class="bp-links">
+<li>Linux workshops</li>
+<hr>
+<li>Raspberry Pi mini-projects and IT Training</li>
+</ul>
+<a href="https://cloud2class.com/courses" class="btn btn-danger">Book Here</a>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title"><a href="http://teachinglondoncomputing.org">TLC</a></h2>
+  </div>
+  <div class="panel-body">
+<a style="color: #3c763d; text-decoration: none;" href="http://teachinglondoncomputing.org" class="lead">Teaching London Computing runs continuing professional development courses for teachers of ICT and computing.</a>
+<div class="row ui-sortable" style="margin-top:20px;">
+<a href="http://teachinglondoncomputing.org/cpd-courses/"><div class="col-md-4 cpd-box"><p>CPD Courses</p></div></a>
+<a href="http://teachinglondoncomputing.org/free-workshops/"><div class="col-md-4 workshop-box"><p>Free Workshops</p></div></a>
+<a href="http://teachinglondoncomputing.org/resources/"><div class="col-md-4 resource-box"><p>Resources</p></div></a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="content-c">
+  <div class="row ui-sortable">
+ <div class="col-sm-4">
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title">the Console Cloud</h2>
+  </div>
+<div class="panel-body">
+<p class="lead">Destructible Linux instances.</p>
+<p>Launch your own private cloud for the duration of your lesson. Easy to start, simple to use. Ask for a free trial today.</p>
+<img class="img-responsive" src="images/snip-cmyk.png">
+</div>
+</div>
+</div>
+
+<div class="col-sm-4 eq-col" style="padding-bottom: 20px;">
+<div class="img-clamp people" data-container="body" data-toggle="popover" data-placement="right" data-content="People using Cloud2Class." style="display: block;" data-original-title="" title=""></div>
+</div>
+    <div class="col-sm-4">
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title">the Lightweight Desktop</h2>
+  </div>
+<div class="panel-body">
+<p class="lead">Cloud-based desktop environments</p>
+<p>Available quickly for your whole class. Simple to start, easy to use. Ask for a free trial today.</p>
+<img class="img-responsive" src="images/snip-cmyk.png">
+</div>
+</div>
+</div>
+</div>
+</div>

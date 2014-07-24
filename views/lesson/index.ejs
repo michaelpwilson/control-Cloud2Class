@@ -1,0 +1,48 @@
+<div style="margin-top:90px;" class="alert alert-danger" role="alert"><strong>Hello <%= req.session.User.forename %>!</strong> This is a red alert box which means danger.</div>
+
+<h2>Desktops</h2>
+<div class="jumbotron">
+<ul>
+<li><a>Desktop line: Bakewell</a><a class="file-option btn btn-danger" id="delete"><i class="glyphicon glyphicon-remove"></i></a><a class="file-option btn btn-success" id="download"><i class="glyphicon glyphicon-save"></i></a><a class="file-option btn btn-info" id="open"><i class="glyphicon glyphicon-open"></i></a></li>
+
+<li><a>Empty Desktop Line: Click to start a desktop</a><a class="file-option btn btn-danger" id="delete"><i class="glyphicon glyphicon-remove"></i></a><a class="file-option btn btn-success" id="download"><i class="glyphicon glyphicon-save"></i></a><a class="file-option btn btn-info" id="open"><i class="glyphicon glyphicon-open"></i></a></li>
+
+<li><a>Desktop Line: Purchase me</a><a class="file-option btn btn-danger" id="delete"><i class="glyphicon glyphicon-remove"></i></a><a class="file-option btn btn-success" id="download"><i class="glyphicon glyphicon-save"></i></a><a class="file-option btn btn-info" id="open"><i class="glyphicon glyphicon-open"></i></a></li>
+
+<li><a>Desktop line Lesson: Bakewell</a><a class="file-option btn btn-danger" id="delete"><i class="glyphicon glyphicon-remove"></i></a><a class="file-option btn btn-success" id="download"><i class="glyphicon glyphicon-save"></i></a><a class="file-option btn btn-info" id="open"><i class="glyphicon glyphicon-open"></i></a></li>
+
+</ul>
+</div>
+
+<h2>Class Management</h2>
+<div class="row">
+<div class="col-sm-4"><a href="#" data-classid="1" class="in_progress thumbnail">Class in progress:A Dev Lesson</a></div>
+<div class="col-sm-4"><a href="#" data-classid="2" class="in_progress thumbnail">Class in progress:Second Dev Lesson</a></div>
+<div class="col-sm-4"><a href="#" data-classid="3" class="empty_slot thumbnail ui-droppable">Empty class slot</a></div>
+
+<a href="#" class="alert alert-success col-sm-12" role="alert">Click here subscribe to an extra class</a></div>
+
+<h3 class="arrow"><i class="glyphicon glyphicon-arrow-up"></i></h3>
+<h2 style="margin-top:-95px;">Lessons</h2>
+<div class="input-group lesson_searchbar">
+<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+<input type="text" class="form-control" placeholder="Search">
+</div>
+
+<div class="row" style="margin-top:20px;">
+<% for (instance in instances) { %>
+	<div class="col-xs-6 col-md-3">
+          <a class="lesson thumbnail ui-draggable" data-lessonid="<%= instances[instance].lesson_id %>" data-type="<%= instances[instance].type %>">
+           <%= instances[instance].title %>
+          </a>
+        </div>
+<% } %>
+</div>
+<h3 class="arrow"><i class="glyphicon glyphicon-arrow-down"></i></h3>
+
+<h2>Lesson Management</h2>
+<div class="row">
+<div class="col-sm-4"><a href="#" class="thumbnail"><i class="glyphicon glyphicon-plus"></i></a></div>
+<div class="col-sm-4"><a href="#" class="thumbnail"><i class="glyphicon glyphicon-plus"></i></a></div>
+<div class="col-sm-4"><a href="#" class="thumbnail"><i class="glyphicon glyphicon-plus"></i></a></div>
+</div>

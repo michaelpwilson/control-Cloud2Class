@@ -1,0 +1,20 @@
+{
+  "name": "MY Bower",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.10.2",
+    "bootstrap": "3.0.3"
+  },
+  "exportsOverride": {
+      "jquery": {
+        "js/vendor": "**/jquery.min.js"
+      },
+      "jquery-ui": {
+        "js/vendor": "**/jquery-ui.min.js"
+      },
+      "bootstrap": {
+        "js/vendor": "dist/js/bootstrap.min.js",
+        "styles/vendor": "dist/css/*.min.css",
+      }
+  }
+}
